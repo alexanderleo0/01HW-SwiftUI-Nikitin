@@ -9,19 +9,20 @@ import SwiftUI
 
 struct ModalView: View {
     
-    @Environment(\.dismiss) var dismiss
+//    @Environment(\.dismiss) var dismiss
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var bookcaseVM: BookcaseViewModel
     
     var body: some View {
         ZStack {
             if let book = bookcaseVM.bookshelf.randomElement() {
                 DetailScreen(book: book)
-                //            DetailScreen(book: bookcaseVM.bookshelf[1])
-                VStack{
+                VStack {
                     HStack{
                         Spacer()
                         Button {
-                            dismiss()
+                            presentationMode.wrappedValue.dismiss()
+//                            dismiss()
                         } label: {
                             Image(systemName: "chevron.down.square")
                                 .font(.largeTitle)
