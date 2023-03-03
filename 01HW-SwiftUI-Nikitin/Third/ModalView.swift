@@ -8,25 +8,29 @@
 import SwiftUI
 
 struct ModalView: View {
+    
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var bookcaseVM: BookcaseViewModel
     
     var body: some View {
         ZStack {
-            DetailScreen(book: bookcaseVM.bookshelf.randomElement()!)
-            VStack{
-                HStack{
-                    Spacer()
-                    Button {
-                        dismiss()
-                    } label: {
-                        Image(systemName: "chevron.down.square")
-                            .font(.largeTitle)
-                            .padding()
-                            .foregroundColor(.black)
+            if let book = bookcaseVM.bookshelf.randomElement() {
+                DetailScreen(book: book)
+                //            DetailScreen(book: bookcaseVM.bookshelf[1])
+                VStack{
+                    HStack{
+                        Spacer()
+                        Button {
+                            dismiss()
+                        } label: {
+                            Image(systemName: "chevron.down.square")
+                                .font(.largeTitle)
+                                .padding()
+                                .foregroundColor(.black)
+                        }
                     }
+                    Spacer()
                 }
-                Spacer()
             }
         }
         

@@ -25,8 +25,12 @@ struct FirstTabScreen: View {
                 ForEach(bookcaseVM.bookshelf) { book in
                     Button{
                         tabSelected = 1
-                        presentedBooks = []
-                        presentedBooks.append(book)
+                        if #available(iOS 16.0, *) {
+                            presentedBooks = []
+                            presentedBooks.append(book)
+                        } else {
+                            presentedNumberIOS15 = book
+                        }
                     } label: {
                         Image(book.image)
                             .resizable()

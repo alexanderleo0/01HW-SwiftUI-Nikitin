@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct _1HW_SwiftUI_NikitinApp: App {
+    
+    @StateObject var bookcaseVM: BookcaseViewModel = BookcaseViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(BookcaseViewModel())
+                .environmentObject(bookcaseVM)
         }
     }
 }
