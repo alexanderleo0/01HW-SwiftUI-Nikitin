@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B2B5AA229BA20AC008DFC2D /* FourthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B5AA129BA20AC008DFC2D /* FourthScreen.swift */; };
+		7B2B5AA429BA2122008DFC2D /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 7B2B5AA329BA2122008DFC2D /* Networking */; };
 		7B39288329AFDB480067463E /* _1HW_SwiftUI_NikitinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39288229AFDB480067463E /* _1HW_SwiftUI_NikitinApp.swift */; };
-		7B39288529AFDB480067463E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39288429AFDB480067463E /* ContentView.swift */; };
+		7B39288529AFDB480067463E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39288429AFDB480067463E /* RootView.swift */; };
 		7B39288729AFDB490067463E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B39288629AFDB490067463E /* Assets.xcassets */; };
 		7B39288A29AFDB490067463E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B39288929AFDB490067463E /* Preview Assets.xcassets */; };
 		7B60623B29AFEB28009B264B /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B60623A29AFEB28009B264B /* DetailScreen.swift */; };
@@ -19,9 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B01546C29B85CB7006D68F0 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = text; name = Networking; path = Modules/Networking; sourceTree = SOURCE_ROOT; };
+		7B2B5A9E29B9CD38008DFC2D /* generator.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generator.sh; sourceTree = SOURCE_ROOT; };
+		7B2B5AA129BA20AC008DFC2D /* FourthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreen.swift; sourceTree = "<group>"; };
 		7B39287F29AFDB480067463E /* 01HW-SwiftUI-Nikitin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01HW-SwiftUI-Nikitin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B39288229AFDB480067463E /* _1HW_SwiftUI_NikitinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _1HW_SwiftUI_NikitinApp.swift; sourceTree = "<group>"; };
-		7B39288429AFDB480067463E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7B39288429AFDB480067463E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		7B39288629AFDB490067463E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B39288929AFDB490067463E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7B60623A29AFEB28009B264B /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
@@ -36,17 +41,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B2B5AA429BA2122008DFC2D /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B01546D29B85CD6006D68F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B2B5AA029BA2083008DFC2D /* Fourth */ = {
+			isa = PBXGroup;
+			children = (
+				7B2B5AA129BA20AC008DFC2D /* FourthScreen.swift */,
+			);
+			path = Fourth;
+			sourceTree = "<group>";
+		};
 		7B39287629AFDB480067463E = {
 			isa = PBXGroup;
 			children = (
 				7B39288129AFDB480067463E /* 01HW-SwiftUI-Nikitin */,
 				7B39288029AFDB480067463E /* Products */,
+				7B01546D29B85CD6006D68F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,11 +83,13 @@
 		7B39288129AFDB480067463E /* 01HW-SwiftUI-Nikitin */ = {
 			isa = PBXGroup;
 			children = (
+				7B01546C29B85CB7006D68F0 /* Networking */,
 				7B39288229AFDB480067463E /* _1HW_SwiftUI_NikitinApp.swift */,
-				7B39288429AFDB480067463E /* ContentView.swift */,
+				7B39288429AFDB480067463E /* RootView.swift */,
 				7B846AC529B2214F00E4724E /* Tabs */,
 				7B39288629AFDB490067463E /* Assets.xcassets */,
 				7B39288829AFDB490067463E /* Preview Content */,
+				7B2B5A9E29B9CD38008DFC2D /* generator.sh */,
 			);
 			path = "01HW-SwiftUI-Nikitin";
 			sourceTree = "<group>";
@@ -110,6 +134,7 @@
 				7B846AC229B202C100E4724E /* First */,
 				7B846AC329B202CA00E4724E /* Second */,
 				7B846AC429B202D100E4724E /* Third */,
+				7B2B5AA029BA2083008DFC2D /* Fourth */,
 			);
 			name = Tabs;
 			path = Third;
@@ -131,6 +156,9 @@
 			dependencies = (
 			);
 			name = "01HW-SwiftUI-Nikitin";
+			packageProductDependencies = (
+				7B2B5AA329BA2122008DFC2D /* Networking */,
+			);
 			productName = "01HW-SwiftUI-Nikitin";
 			productReference = 7B39287F29AFDB480067463E /* 01HW-SwiftUI-Nikitin.app */;
 			productType = "com.apple.product-type.application";
@@ -185,12 +213,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B39288529AFDB480067463E /* ContentView.swift in Sources */,
+				7B39288529AFDB480067463E /* RootView.swift in Sources */,
 				7B846ABF29B1F78B00E4724E /* ThirdTabScreen.swift in Sources */,
 				7B39288329AFDB480067463E /* _1HW_SwiftUI_NikitinApp.swift in Sources */,
 				7B846ABD29B1E74600E4724E /* FirstTabScreen.swift in Sources */,
 				7B846AC129B1FA9E00E4724E /* ModalView.swift in Sources */,
 				7B60623B29AFEB28009B264B /* DetailScreen.swift in Sources */,
+				7B2B5AA229BA20AC008DFC2D /* FourthScreen.swift in Sources */,
 				7B846ABB29B1E5AE00E4724E /* SecondTabScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +423,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B2B5AA329BA2122008DFC2D /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7B39287729AFDB480067463E /* Project object */;
 }

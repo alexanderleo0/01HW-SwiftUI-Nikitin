@@ -86,7 +86,7 @@ struct BookCell: View {
 // MARK: - Preview
 struct SecondTabScreen_Previews: PreviewProvider {
     static var previews: some View {
-        SecondTabScreen(presentedBook: ContentView().$presentedBooks, presenedNumbersIOS15: ContentView().$presentedNumberIOS15)
+        SecondTabScreen(presentedBook: RootView().$presentedBooks, presenedNumbersIOS15: RootView().$presentedNumberIOS15)
             .environmentObject(BookcaseViewModel())
     }
 }

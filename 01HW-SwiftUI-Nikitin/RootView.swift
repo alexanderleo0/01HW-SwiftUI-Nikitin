@@ -8,10 +8,10 @@
 import SwiftUI
 
 
-struct ContentView: View {
+struct RootView: View {
     
     // Управляем выбором таба
-    @State var tabSelected : Int = 0
+    @State var tabSelected : Int = 3
     
     // Управляем ручным открытием вкладок на втором табе
     @State var presentedBooks: [Book] = []
@@ -41,6 +41,12 @@ struct ContentView: View {
                     Text("Third")
                 }
                 .tag(2)
+            FourthScreen()
+                .tabItem {
+                    Image(systemName: "4.lane")
+                    Text("Fourth")
+                }
+                .tag(3)
         }
         .accentColor(.orange)
         .environmentObject(BookcaseViewModel())
@@ -51,7 +57,7 @@ struct ContentView: View {
 // MARK: - Preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        RootView()
     }
 }
 

@@ -14,7 +14,7 @@ struct _1HW_SwiftUI_NikitinApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
                 .environmentObject(bookcaseVM)
         }
     }

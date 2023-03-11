@@ -46,7 +46,7 @@ struct FirstTabScreen: View {
 
 struct FirstTabScreen_Previews: PreviewProvider {
     static var previews: some View {
-        FirstTabScreen(tabSelected: ContentView().$tabSelected, presentedBooks: ContentView().$presentedBooks, presentedNumberIOS15: ContentView().$presentedNumberIOS15)
+        FirstTabScreen(tabSelected: RootView().$tabSelected, presentedBooks: RootView().$presentedBooks, presentedNumberIOS15: RootView().$presentedNumberIOS15)
             .environmentObject(BookcaseViewModel())
     }
 }
