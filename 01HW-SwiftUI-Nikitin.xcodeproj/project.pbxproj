@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B2B5AA229BA20AC008DFC2D /* FourthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2B5AA129BA20AC008DFC2D /* FourthScreen.swift */; };
 		7B2B5AA429BA2122008DFC2D /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 7B2B5AA329BA2122008DFC2D /* Networking */; };
 		7B39288329AFDB480067463E /* _1HW_SwiftUI_NikitinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39288229AFDB480067463E /* _1HW_SwiftUI_NikitinApp.swift */; };
 		7B39288529AFDB480067463E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39288429AFDB480067463E /* RootView.swift */; };
@@ -18,12 +17,12 @@
 		7B846ABD29B1E74600E4724E /* FirstTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B846ABC29B1E74600E4724E /* FirstTabScreen.swift */; };
 		7B846ABF29B1F78B00E4724E /* ThirdTabScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B846ABE29B1F78B00E4724E /* ThirdTabScreen.swift */; };
 		7B846AC129B1FA9E00E4724E /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B846AC029B1FA9E00E4724E /* ModalView.swift */; };
+		7BCFA8A929BE11EF005A30B8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7BCFA8A829BE11EF005A30B8 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B01546C29B85CB7006D68F0 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = text; name = Networking; path = Modules/Networking; sourceTree = SOURCE_ROOT; };
 		7B2B5A9E29B9CD38008DFC2D /* generator.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generator.sh; sourceTree = SOURCE_ROOT; };
-		7B2B5AA129BA20AC008DFC2D /* FourthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthScreen.swift; sourceTree = "<group>"; };
 		7B39287F29AFDB480067463E /* 01HW-SwiftUI-Nikitin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01HW-SwiftUI-Nikitin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B39288229AFDB480067463E /* _1HW_SwiftUI_NikitinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _1HW_SwiftUI_NikitinApp.swift; sourceTree = "<group>"; };
 		7B39288429AFDB480067463E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BCFA8A929BE11EF005A30B8 /* Kingfisher in Frameworks */,
 				7B2B5AA429BA2122008DFC2D /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +58,6 @@
 		7B2B5AA029BA2083008DFC2D /* Fourth */ = {
 			isa = PBXGroup;
 			children = (
-				7B2B5AA129BA20AC008DFC2D /* FourthScreen.swift */,
 			);
 			path = Fourth;
 			sourceTree = "<group>";
@@ -158,6 +157,7 @@
 			name = "01HW-SwiftUI-Nikitin";
 			packageProductDependencies = (
 				7B2B5AA329BA2122008DFC2D /* Networking */,
+				7BCFA8A829BE11EF005A30B8 /* Kingfisher */,
 			);
 			productName = "01HW-SwiftUI-Nikitin";
 			productReference = 7B39287F29AFDB480067463E /* 01HW-SwiftUI-Nikitin.app */;
@@ -187,6 +187,9 @@
 				Base,
 			);
 			mainGroup = 7B39287629AFDB480067463E;
+			packageReferences = (
+				7BCFA8A729BE11EF005A30B8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 7B39288029AFDB480067463E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -219,7 +222,6 @@
 				7B846ABD29B1E74600E4724E /* FirstTabScreen.swift in Sources */,
 				7B846AC129B1FA9E00E4724E /* ModalView.swift in Sources */,
 				7B60623B29AFEB28009B264B /* DetailScreen.swift in Sources */,
-				7B2B5AA229BA20AC008DFC2D /* FourthScreen.swift in Sources */,
 				7B846ABB29B1E5AE00E4724E /* SecondTabScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,10 +426,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		7BCFA8A729BE11EF005A30B8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		7B2B5AA329BA2122008DFC2D /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Networking;
+		};
+		7BCFA8A829BE11EF005A30B8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BCFA8A729BE11EF005A30B8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

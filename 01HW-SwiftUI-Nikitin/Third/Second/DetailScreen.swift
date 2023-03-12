@@ -6,28 +6,42 @@
 //
 
 import SwiftUI
+import Networking
+import Kingfisher
 
 struct DetailScreen: View {
     
-    let book : Book
+    let cat : Cat
+    
+    init(with cat: Cat) {
+        self.cat = cat
+    }
     
     var body: some View {
-        VStack(alignment: .leading){
-            Image(book.image)
-                .resizable()
-                .scaledToFit()
-            Text(book.name)
-                .font(.system(.largeTitle, design: .rounded))
-                .bold()
-            Text(book.author)
+        ScrollView{
+            VStack(alignment: .leading){
+                if let url = URL(string: cat.url ?? "") {
+                    KFImage(url)
+                        .resizable()
+                        .scaledToFit()
+                }
+                if let breeds = cat.breeds?[0] {
+                    Text(breeds.name ?? "No Name")
+                        .font(.system(.largeTitle, design: .rounded))
+                        .bold()
+                    Text(breeds.description ?? "No description")
+                }
+            }
+            .ignoresSafeArea()
+            .padding()
         }
-        .ignoresSafeArea()
-        .padding()
+        
     }
 }
 
 struct DetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        DetailScreen(book: Book(name: "Чагин", author: "Евгений Водолазкин", image: "Евгений Водолазкин «Чагин»"))
+        let catVM = CatsViewModel()
+        DetailScreen(with: catVM.catsArray[0])
     }
 }

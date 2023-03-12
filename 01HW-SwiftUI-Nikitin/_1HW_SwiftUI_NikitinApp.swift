@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct _1HW_SwiftUI_NikitinApp: App {
     
-    @StateObject var bookcaseVM: BookcaseViewModel = BookcaseViewModel()
+    @StateObject var catsVM: CatsViewModel = CatsViewModel()
     
     var body: some Scene {
         WindowGroup {
             RootView()
-                .environmentObject(bookcaseVM)
+                .environmentObject(catsVM)
         }
     }
 }

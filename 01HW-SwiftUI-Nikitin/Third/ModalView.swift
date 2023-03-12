@@ -6,17 +6,18 @@
 //
 
 import SwiftUI
+import Networking
 
 struct ModalView: View {
     
 //    @Environment(\.dismiss) var dismiss
     @Environment(\.presentationMode) var presentationMode
-    @EnvironmentObject var bookcaseVM: BookcaseViewModel
+    @EnvironmentObject var catsVM: CatsViewModel
     
     var body: some View {
         ZStack {
-            if let book = bookcaseVM.bookshelf.randomElement() {
-                DetailScreen(book: book)
+            if let cat = catsVM.catsArray.randomElement() {
+                DetailScreen(with: cat)
                 VStack {
                     HStack{
                         Spacer()
@@ -41,6 +42,6 @@ struct ModalView: View {
 struct ModalView_Previews: PreviewProvider {
     static var previews: some View {
         ModalView()
-            .environmentObject(BookcaseViewModel())
+            .environmentObject(CatsViewModel())
     }
 }
