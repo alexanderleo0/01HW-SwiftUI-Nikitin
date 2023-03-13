@@ -43,7 +43,9 @@ struct FirstTabScreen: View {
                                     .resizable()
                                     .placeholder {ProgressView()}
                                     .aspectRatio(contentMode: .fill)
-                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+//                                    .scaledToFill()
+                                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 200, maxHeight: 200)
+                                    
                                     .clipped()
                                     .onAppear()
                             }
@@ -51,6 +53,7 @@ struct FirstTabScreen: View {
                         }
                     }
                 }
+                .padding(.horizontal, 6)
                 
             }
         }
