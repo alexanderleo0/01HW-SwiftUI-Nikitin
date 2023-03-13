@@ -27,7 +27,7 @@ struct ThirdTabScreen: View {
                     // Show modal view
                 modalViewIsShow.toggle()
             } label: {
-                Text("Show Random Book \n In Modal View")
+                Text("Show Random Cat \n In Modal View")
                     .foregroundColor(.white)
             }
             .padding()
