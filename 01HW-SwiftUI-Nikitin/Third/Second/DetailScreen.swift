@@ -33,7 +33,9 @@ struct DetailScreen: View {
                 }
             }
             .ignoresSafeArea()
-            .padding()
+            .padding(.horizontal)
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
         }
         
     }
@@ -41,7 +43,6 @@ struct DetailScreen: View {
 
 struct DetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        let catVM = CatsViewModel()
-        DetailScreen(with: catVM.catsArray[0])
+        DetailScreen(with: Cat(id: "123", url: "https://cdn2.thecatapi.com/images/1dn.jpg", breeds: [Breeds(description: "Some Description")]))
     }
 }
