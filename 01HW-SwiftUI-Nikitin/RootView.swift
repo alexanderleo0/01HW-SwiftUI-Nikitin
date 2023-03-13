@@ -59,9 +59,14 @@ final class CatsViewModel: ObservableObject {
     @Published private(set) var catsArray : [Cat] = .init()
     
     init() {
+        fetchCats()
+    }
+    
+    func fetchCats(){
+        debugPrint("start fetching cats")
         CatAPI.getSomeCats(apiKey: "live_WqNwVcCYN2xWJt2yfNODEthqOW5JdLu6ujJMIljWzEwGRVR728imSGSIruok6oSR", limit:"30",hasBreeds: "1") { data, error in
             if let cats = data {
-                self.catsArray = cats
+                self.catsArray.append(contentsOf: cats)
             }
         }
     }

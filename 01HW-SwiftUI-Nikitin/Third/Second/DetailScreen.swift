@@ -36,7 +36,7 @@ struct DetailScreen: View {
                 }
             }
             .ignoresSafeArea()
-            .padding(.horizontal)
+            .padding()
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
         }

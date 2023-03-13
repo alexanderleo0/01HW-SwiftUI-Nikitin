@@ -26,8 +26,9 @@ struct FirstTabScreen: View {
                 .scaleEffect(3)
         } else {
             ScrollView {
-            
-                LazyVGrid(columns: Array(repeating: .init(), count: 2), spacing: 6) {
+                
+                LazyVGrid(columns: Array(repeating: .init(), count: 3), spacing: 6) {
+                    
                     ForEach(catsVM.catsArray) { cat in
                         Button{
                             tabSelected = 1
@@ -43,17 +44,28 @@ struct FirstTabScreen: View {
                                     .resizable()
                                     .placeholder {ProgressView()}
                                     .aspectRatio(contentMode: .fill)
-//                                    .scaledToFill()
+                                    //                                    .scaledToFill()
                                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 200, maxHeight: 200)
-                                    
+                                
                                     .clipped()
                                     .onAppear()
                             }
-                            
                         }
                     }
+                    Text("")
+                    ProgressView()
+                        .scaleEffect(2)
+                        .onAppear {
+                            if catsVM.catsArray.count != 0 {
+                                catsVM.fetchCats()
+                            }
+                        }
+                        .frame(height: 100)
+                        
+                    
                 }
                 .padding(.horizontal, 6)
+                
                 
             }
         }
