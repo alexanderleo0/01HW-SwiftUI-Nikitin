@@ -22,8 +22,11 @@ struct DetailScreen: View {
             VStack(alignment: .leading){
                 if let url = URL(string: cat.url ?? "") {
                     KFImage(url)
+                        .placeholder {ProgressView()}
                         .resizable()
                         .scaledToFit()
+                        .onAppear()
+                    
                 }
                 if let breeds = cat.breeds?[0] {
                     Text(breeds.name ?? "No Name")

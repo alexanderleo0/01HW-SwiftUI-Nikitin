@@ -78,9 +78,11 @@ struct CatCell: View {
         HStack {
             if let url = URL(string: cat.url ?? ""){
                 KFImage(url)
+                    .placeholder {ProgressView()}
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: 60, maxHeight: 60)
+                    .onAppear()
                 
             }
             VStack(alignment: .leading) {
