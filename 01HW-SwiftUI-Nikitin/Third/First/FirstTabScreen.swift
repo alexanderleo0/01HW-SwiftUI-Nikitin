@@ -53,19 +53,20 @@ struct FirstTabScreen: View {
                         }
                     }
                     Text("")
-                    ProgressView()
-                        .scaleEffect(2)
                         .onAppear {
                             if catsVM.catsArray.count != 0 {
                                 catsVM.fetchCats()
                             }
                         }
-                        .frame(height: 100)
+                    
                         
                     
                 }
                 .padding(.horizontal, 6)
-                
+                ProgressView()
+                    .scaleEffect(2)
+                    .padding(.bottom)
+//                    .frame(height: 100)
                 
             }
         }
